@@ -1,17 +1,19 @@
 <template>
     <div class="container" :style="{backgroundColor: bgColor}">
-        <div class="container1">
+        <div class="wrap" >
+
             <div class="heading">
                 {{ heanding }}
             </div>
-            <div class="_btn">
+            <div class="btn">
                 <MyButton  :text="textBtn" :Bgcolor="colorBtn"/>
             </div>
         </div>
-        <div class="image">
-            <img :src=Img alt="">
-        </div>
 
+        <div class="image">
+            <img :src="Img" alt="" />
+        </div>
+        
     </div>
 </template>
 
@@ -39,8 +41,8 @@ export default{
         },
         Img: {
             type: String,
-            default: 'https://picsum.photos/200/300', 
-        },
+            default: 'https://picsum.photos/200/300',
+        }
     },
     components: {
         MyButton,
@@ -51,42 +53,51 @@ export default{
 
 <style scoped>
 
-.container {
-    width: 455px;
-    height: 300px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    border: 1px ;
-}
-.container1 {
-    width: 200px;
-    height: 100px;
-    margin-left: 50px;
-    margin-top: 70px;
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600&display=swap');
+
+.wrap{
+    width: 60%;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-
+    justify-content: space-evenly;
+    align-items: start;
+    padding: 10px;
+    margin-left: 10px;
 }
+.container {
+    width: 480px;
+    height: 300px;
+    border: 1px solid #BCE3C9;
+    display: flex;
+    border-radius: 10px;
+
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.container:hover {
+    border: 2px solid #3BB77E;
+}
+
 .heading {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;;
-    font-size: 25px;
-    font-weight: 700;
-    line-height: 30px;
+    font-family: Quicksand;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
     color: #000;
 }
-._btn {
-    margin-top: 50px;
+.btn {
+    margin-top: 20px;
 }
 .image {
-    width: 260px;
-    height: 250px;
-    margin-top: 50px;
+    width: 40%;
+    height: 60%;
+    margin-top: 120px;
     justify-content: center;
     align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
 }
 
 img {

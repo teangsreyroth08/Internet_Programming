@@ -41,29 +41,34 @@ export default {
 <style scoped>
 
 .container {
-    width: 130px;
-    height: 180px;
-    border: 2px;
+    width: 137px;
+    height: 185px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items:center;
+    align-items: center;
     border-radius: 10px;
+    border: 1px solid #BCE3C9;
+
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    cursor: pointer;
+}
+
+.container:hover {
+    border: 2px solid #3BB77E;
 }
 
 .image {
-    width: 110px;
-    height: 110px;
+    width: 120px;
+    height: 120px;
     border-radius: 10px;
     margin-bottom: 10px;
-    display:flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .title {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-weight: 550;
+    font-family: Quicksand;
+    font-weight: 700;
     font-size: 16px;
     line-height: 20px;
     align-items: center;
@@ -81,6 +86,4 @@ export default {
     color: #00000087;
 }
 
-</style> 
-
-
+</style>
